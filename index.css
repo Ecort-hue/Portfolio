@@ -1,15 +1,15 @@
 .greeting {
     font-family: "K2D", sans-serif;
-    align-content: center;
     color: white;
     font-size: 35px;
-    width: 100px;
+    text-align: center;
 }
 
 h1 {
     font-family: "K2D", sans-serif;
     text-align: center;
     color: white;
+    padding-top: 30px;
 }
 
 body {
@@ -17,48 +17,25 @@ body {
 }
 
 .Check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "K2D", sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 13px 27px;
     font-size: 50px;
     background-color: #3500D3;
     color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .block {
-    width: 900px;
+    width: 90%;
+    max-width: 900px;
     height: 400px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 30px auto;
     border: 10px solid rgb(0, 0, 0);
-}
-
-.block_br {
-    width: 50px;
-    height: 400px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(667%, -50%);
-    border: 10px solid rgb(0, 0, 0);
-    border-left-style: solid;
-    border-right-style: none;
 }
 
 .contact {
@@ -68,19 +45,10 @@ body {
     align-items: center;
     width: 130px;
     height: 60px;
-    top: 50%;
-    left: 50%;
-    transform: translate(1500%, -250%);
     background-color: white;
     border-radius: 20px;
     font-size: 30px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
 }
-
-@media screen and (min-width: 481px) {
-    .block {
-
-        flex-direction: column;
-
-    }
-}
-
