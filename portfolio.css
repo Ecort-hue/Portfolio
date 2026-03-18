@@ -3,12 +3,27 @@ font-family: "K2D", sans-serif;
     color: white;
     font-size: 25px;
 }
-.Github{
-font-family: "K2D", sans-serif;
+
+
+.Github {
+    font-family: "K2D", sans-serif;
     color: white;
     font-size: 25px;
-float: right    ;
 }
 .bi-github{
 color: white;
+}
+
+
+.project1 {
+
+grid-column: auto;
+
+
+}
+
+.card{
+border: 2px solid #333;
+align-content: center;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
