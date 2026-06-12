@@ -1,29 +1,312 @@
-.home{
-font-family: "K2D", sans-serif;
-    color: white;
-    font-size: 25px;
+
+
+/* ---- Reset / Base ---- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: "K2D", sans-serif;
+    min-height: 100vh;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+    background-color: #3500D3 !important;
+    padding: 14px 0;
+    opacity: 0;
+}
+
+.nav-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.35);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home {
+    font-family: "K2D", sans-serif;
+    color: white;
+    font-size: 16px;
+}
 
 .Github {
     font-family: "K2D", sans-serif;
     color: white;
-    font-size: 25px;
-}
-.bi-github{
-color: white;
+    font-size: 16px;
 }
 
-
-.project1 {
-
-grid-column: auto;
-
-
+/* ---- Hero Section ---- */
+.hero-section {
+    padding: 70px 40px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    opacity: 0;
 }
 
-.card{
-border: 2px solid #333;
-align-content: center;
-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.hero-label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    color: #3500D3;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(60px, 10vw, 120px);
+    line-height: 0.9;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.hero-sub {
+    font-family: "K2D", sans-serif;
+    font-size: 17px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 40px;
+}
+
+.hero-disc{
+ font-family: "K2D", sans-serif;
+    font-size: 17px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 40px;
+
+}
+.hero-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+/* ---- Projects Grid ---- */
+.projects-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px 80px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+/* ---- Project Card ---- */
+.project-card {
+    background-color: #111111;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover {
+    border-color: #3500D3;
+    transform: translateY(-4px);
+}
+
+.project-card--wip {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ---- Card Image ---- */
+.card-image-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-img {
+    transform: scale(1.04);
+}
+
+.card-image-placeholder {
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border: 2px solid rgba(53, 0, 211, 0.4);
+    border-radius: 50%;
+}
+
+.placeholder-icon {
+    font-size: 28px;
+}
+
+/* ---- Card Overlay ---- */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(53, 0, 211, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    font-family: "K2D", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.overlay-btn:hover {
+    background: white;
+    color: #3500D3;
+}
+
+/* ---- Card Info ---- */
+.card-info {
+    padding: 22px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.tag {
+    font-family: "K2D", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.tag-html  { background: rgba(239,68,68,0.15);  color: #f87171; }
+.tag-css   { background: rgba(59,130,246,0.15); color: #60a5fa; }
+.tag-js    { background: rgba(234,179,8,0.15);  color: #facc15; }
+.tag-wip   { background: rgba(107,114,128,0.2); color: #9ca3af; }
+
+.card-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+.card-desc {
+    font-family: "K2D", sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+/* ---- Progress Bar ---- */
+.card-bar {
+    display: flex;
+    height: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.05);
+}
+
+.bar-seg {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 16px;
+}
+
+/* ---- Card Link ---- */
+.card-link {
+    font-family: "K2D", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3500D3;
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s ease;
+}
+
+.card-link:hover {
+    color: #6b40ff;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 14px;
+    color: rgba(255,255,255,0.3);
+}
+
+.site-footer a {
+    color: #3500D3;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #6b40ff;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .projects-section { padding: 30px 20px 60px; }
+    .hero-section { padding: 50px 20px 35px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .nav-title { display: none; }
 }
