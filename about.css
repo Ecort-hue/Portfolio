@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url("https://i.ibb.co/1GRhbw2y/360-F-173872725-OFh6y6ckc-TBd-NJZx-EA9y-VAmj-Z2dxf4qt.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+
+.nav {
+    background: #CA4D4D;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "Hanalei Fill", cursive;
+    font-size: 1.2rem;
+}
+
+.nav a.active {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.title {
+    font-family: "Hanalei Fill";
+    text-align: center;
+    font-size: 3rem;
+    color: #CA4D4D;
+}
+
+.story p {
+    background-color: #CA4D4D;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.info .box {
+    width: 30%;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.map img {
+   
+    height: 50%;
+    width: 50%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.extras {
+    font-family: "Hanalei Fill";
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    color: #CA4D4D;
+}
+
+.extras div {
+    width: 45%;
+}
+
+.extras img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .placeholder {
+    width: 100%;
+    height: auto;
+  }
+}

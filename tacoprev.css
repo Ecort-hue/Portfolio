@@ -1,0 +1,162 @@
+.food_sec{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home {
+font-family: "Hanalei Fill", system-ui;
+}
+
+.nav {
+    background: #CA4D4D;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: -10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "Hanalei Fill";
+    font-size: 1.2rem;
+}
+body {
+    background-image: url("https://i.ibb.co/1GRhbw2y/360-F-173872725-OFh6y6ckc-TBd-NJZx-EA9y-VAmj-Z2dxf4qt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+   
+}
+
+
+.home {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.taco_img img {
+    width: 10%;
+    height: auto;
+    grid-column: 1 / 2;
+}
+
+.taco_section {
+    grid-column: 1 / 2;
+  
+}
+
+.torta_img  {
+
+
+width: 75px;
+    height: 75px;
+
+}
+
+.tortas_section {
+    grid-column: 2 / 3;
+    text-align: right;
+}
+
+.drinks_section {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.mention {
+    grid-column: 1 / -1;
+    font-family: "Hanalei Fill", system-ui;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.tacos p,
+.Tortas p,
+.Drinks p {
+    display: flex;
+    font-family: "Hanalei Fill", system-ui;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+.description {
+    font-size: 16px;
+    color: #CA4D4D;
+    margin: -10px 0 15px 0;
+    font-family: "Hanalei Fill", system-ui;
+}
+
+
+
+.tacos h1
+    {
+    font-family: "Hanalei Fill", system-ui;
+    color: #CA4D4D;
+}
+
+
+.title_taco {
+    color: #428F31;
+    font-size: 40px;
+    font-family: "Hanalei Fill", system-ui;
+
+    text-align: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.title_drinks {
+    font-family: "Hanalei Fill", system-ui;
+    color: #FED000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 64px;
+    text-align: center;
+}
+
+
+
+
+.title_tortas {
+
+    font-family: "Hanalei Fill", system-ui;
+    text-align: right;
+    color: #D55685;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
